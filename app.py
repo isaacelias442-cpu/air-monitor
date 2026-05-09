@@ -199,9 +199,6 @@ with tab1:
             st.toast(f"Análisis IA: {label}", icon="✨")
             color = COLORS['success'] if label == 'Good' else (COLORS['warning'] if label == 'Moderate' else COLORS['danger'])
             st.markdown(f"<div class='prediction-box' style='background: {color}22; border-color: {color};'><h4 style='color:{color}; margin:0;'>ESTADO DETECTADO</h4><h1 style='color:{color}; margin:0; font-size:3.5rem;'>{label}</h1><span style='background:{color}; color:white; padding: 0.5rem 1rem; border-radius: 99px; font-weight: bold;'>CONFIANZA {prob[pred]*100:.1f}%</span></div>", unsafe_allow_html=True)
-            fig_p, ax_p = plt.subplots(figsize=(4, 3)); fig_p.patch.set_facecolor('none'); ax_p.set_facecolor('none')
-            ax_p.barh([LABEL_MAP[c] for c in act_mod.classes_], prob, color=[COLORS['success'], COLORS['warning'], COLORS['danger']])
-            ax_p.set_xlim(0, 1); ax_p.tick_params(colors=COLORS['subtext']); st.pyplot(fig_p)
         else:
             st.markdown("<div style='text-align:center; padding:3rem; color:#64748b;'><h3>Esperando entrada...</h3><p>Cargue datos o use el modo aleatorio</p></div>", unsafe_allow_html=True)
     st.markdown("</div>", unsafe_allow_html=True)
