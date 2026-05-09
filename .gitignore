@@ -2,36 +2,17 @@
 __pycache__/
 *.py[cod]
 *$py.class
-*.so
-*.egg-info/
-dist/
-build/
-*.egg
+.env
+venv/
+.venv/
+env/
 
-# Jupyter Notebook checkpoints
-.ipynb_checkpoints/
-
-# IDE
-.vscode/
-.idea/
-*.swp
-*.swo
+# Streamlit
+.streamlit/
 
 # OS
+.DS_Store
 Thumbs.db
-Desktop.ini
 
 # Logs
 *.log
-
-# Environments
-.env
-.venv/
-venv/
-ENV/
-
-# Project specific
-.agents/
-indias.ipynb
-logistic_regresion.ipynb
-run_notebooks.py
